@@ -1,4 +1,4 @@
-FROM debian:8.0
+FROM scratch
 MAINTAINER Johannes Scheuermann <johannes.scheuermann@inovex.de>
 ADD hello-webserver /hello-webserver
 CMD ["/hello-webserver"]
