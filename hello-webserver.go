@@ -67,9 +67,14 @@ func responseWithIPs(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func healthCheck(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "Alive")
+}
+
 func main() {
 	Init(ioutil.Discard, os.Stdout, os.Stdout, os.Stderr)
 	Info.Println("Started")
 	http.HandleFunc("/", responseWithIPs)
+	http.HandleFunc("/health", healthCheck)
 	http.ListenAndServe(":8000", nil)
 }
