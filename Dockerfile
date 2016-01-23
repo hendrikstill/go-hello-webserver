@@ -1,4 +1,4 @@
-FROM scratch
+FROM alpine:3.3
 MAINTAINER Johannes Scheuermann <johannes.scheuermann@inovex.de>
 ADD hello-webserver /hello-webserver
 CMD ["/hello-webserver"]
