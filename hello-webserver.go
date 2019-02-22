@@ -24,7 +24,7 @@ var (
 )
 
 func fetchAllIfaces() (*string, error) {
-	result := "Hello World!\n"
+	result := "Hello Knative!!!\n"
 
 	ifaces, err := net.Interfaces()
 	if err != nil {
