@@ -71,7 +71,7 @@ func Init(
 
 func responseWithIPs(w http.ResponseWriter, r *http.Request) {
 	Info.Printf("Got %q Request on %q", r.Method, r.Host)
-	io.WriteString(w, "Hello my addresses are the following:\n")
+	io.WriteString(w, "Hello from knative and my addresses are the following:\n")
 	io.WriteString(w, *output)
 }
 
